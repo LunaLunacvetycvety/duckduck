@@ -1,0 +1,14 @@
+from selenium import webdriver
+
+
+driver = webdriver.Chrome(option);
+driver.manage().window().maximize();
+open_new_tab('https://duckduckgo.com/')
+element = driver.find_element_by_id("search_form_input")
+element.send_keys("QA вопросы на собеседование")
+WebElement element = driver.findElement(By.id("first"));
+File screenshot = ((TakesScreenshot) driver).
+                    getScreenshotAs(OutputType.FILE);
+String path = "./target/screenshots/" + screenshot.getName();
+FileUtils.copyFile(screenshot, new File(path));
+driver.quit()
